@@ -1,0 +1,8 @@
+{
+  "label": "Profile management",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Now that you have an account, let's set up a few details together."
+  }
+}

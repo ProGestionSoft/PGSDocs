@@ -1,0 +1,312 @@
+/* GENERAL */ 
+.PgCompCont {
+  background-color: var(--BtG-Bg);
+  color: var(--txt-clr);
+  border: 1px solid var(--BtW-clr);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.PgCompCont h2 {
+  text-align: center;
+  color: var(--pmr-clr);
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--txt-clr);
+}
+
+input,
+textarea,
+.addInvoice select {
+  flex: 1;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--txt-clr);
+  border-radius: 5px;
+}
+
+.PgCompBtn {
+  display: block;
+  background-color: transparent;
+  color: var(--BtW-clr);
+  border-radius: 5px;
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid var(--sdr-clr);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.PgCompBtn:hover {
+  background-color: var(--sdr-clr);
+  color: var(--WtB-clr);
+}
+
+.preview {
+  background-color: var(--PLtSL);
+  border: 1px dashed var(--txt-clr);
+  border-top: 3px solid var(--sdr-clr);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px 50px 10px 50px;
+}
+
+.preview h2,
+.invoiceList h2,
+.question p,
+.expenseList h2,
+.uploadedDocuments h2,
+.summaryBox h3 {
+  text-align: center;
+  color: var(--sdr-clr);
+}
+
+.inlineResult {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #e53935; /* REVOIR */
+  font-weight: bold;
+}
+
+.deleteBtn {
+  padding: 4px 8px;
+  background-color: #f30905; /* REVOIR */
+  color: white; /* REVOIR */
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #c62828; /* REVOIR */
+}
+
+/*  COMMUN */
+.taskInput,
+.expenseInput {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.employeeList ul,
+.invoiceList ul,
+.expenseList ul,
+.uploadedDocuments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.taskList li,
+.employeeList li,
+.invoiceList li,
+.expenseList li,
+.documentItem { 
+  display: flex;
+  background-color: var(--WtB-Bg);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid var(--txt-clr);
+  border-radius: 4px;
+}
+
+.taskList select,
+.invoiceList select {
+  margin-right: 10px;
+  padding: 4px;
+}
+
+.taskName.pending,
+.invName.unpaid {
+  color: #ff9800; /* REVOIR */
+}
+
+.taskName.completed,
+.invName.paid {
+  color: #4caf50; /* REVOIR */
+  text-decoration: line-through;
+}
+
+
+/* Meilleurs employés */
+.employeeMessage {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px dashed var(--txt-clr);
+  color: var(--txt-clr);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Taches */
+.filter {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.taskName {
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+/* Attendance */
+.addEmployee {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.employeeList span {
+  cursor: pointer;
+  color: #007bff; /* REVOIR */
+}
+
+.attendanceActions button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.attendanceActions button:first-child {
+  background-color: #4caf50; /* REVOIR */
+  color: white; /* REVOIR */
+}
+
+.attendanceActions button:last-child {
+  background-color: #e53935; /* REVOIR */
+  color: white; /* REVOIR */
+}
+
+.attendanceActions button:hover {
+  opacity: 0.9;
+}
+
+
+/* ClientsInvoice */
+.addInvoice {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Dépenses */
+.expenseInput {
+  flex-direction: column;
+}
+
+.expenseInput input,
+.expenseInput select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Documents */
+.preview img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+
+/* Quiz */
+.formGroup .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+
+/* Dashboard */
+.chartSelector {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.chartSelector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.chartSelector select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* REVOIR */
+}
+
+.chartContainer {
+  margin-bottom: 40px;
+}
+
+.summaryContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.summaryBox {
+  background-color: #fff; /* REVOIR */
+  border: 1px solid #ddd; /* REVOIR */
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.summaryBox p {
+  color: #e53935; /* REVOIR */
+}
+
+
+@media (max-width: 768px) {
+  /* Quiz */
+  .formGroup .options {
+    flex-direction: column;
+  }
+
+  /* Dashboard */
+  .chartContainer {
+    height: 300PX;
+  }
+  
+  .summaryContainer {
+    flex-direction: column;
+  }
+}

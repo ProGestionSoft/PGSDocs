@@ -1,0 +1,8 @@
+{
+  "label": "Control center",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Search, comments, support, and setting up your alerts and subscriptions."
+  }
+}

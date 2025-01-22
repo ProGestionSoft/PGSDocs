@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpgsdocs=self.webpackChunkpgsdocs||[]).push([[8121],{8070:s=>{s.exports=JSON.parse('{"tags":[{"label":"PGS","permalink":"/blog/tags/pgs","description":"Tous les articles de PRO GSETION SOFT","count":3},{"label":"Annonce","permalink":"/blog/tags/annonce","description":"Tous les articles avec Annonce","count":1}]}')}}]);

@@ -1,0 +1,8 @@
+{
+  "label": "Management modules",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Access to modules, management optimizations."
+  }
+}

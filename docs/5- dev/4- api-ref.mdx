@@ -1,0 +1,97 @@
+---
+id: api-ref
+sidebar_position: 4
+title: API Référence
+description: Intégration et personnalisation des fonctionnalités.
+---
+import styles from '@site/src/css/docs.module.css';
+ 
+
+# <i class="fas fa-plug"></i> API Référence
+
+:::warning
+Cette documentation est incomplète et n'explore pas encore de façon détaillée chaque ressource et point de terminaison de la section.
+
+Nous complèterons progressivement cette section avec :
+- Les paramètres acceptés.  
+- Les réponses possibles avec leurs codes d’état (`200 OK`, `400 Bad Request`, etc.).  
+- Des exemples de requêtes et de réponses.
+:::
+
+Que vous construisiez une solution personnalisée ou automatisiez des processus, notre API vous offre une interface puissante et flexible pour accéder aux données et intégrer nos fonctionnalités directement dans vos propres applications. Voici ce que vous pouvez faire :
+  - **Automatisation des tâches** : Connectez et automatisez vos flux de travail en exploitant les données de gestion en temps réel.  
+  - **Intégrations sur mesure** : Créez des solutions adaptées aux besoins spécifiques de votre entreprise.  
+  - **Accès centralisé** : Interagissez avec les différents modules de Pro Gestion Soft via une interface unifiée.
+ 
+## Caractéristiques principales \{#features}
+
+- **RESTful API** : Suit les standards REST, garantissant une intégration simple et efficace.  
+- **Formats** : Toutes les requêtes et réponses sont formatées en JSON pour une intégration universelle.  
+- **Sécurité** : Chaque appel est sécurisé par des jetons d'authentification basés sur le protocole OAuth 2.0.  
+- **Multi-module** : Interaction avec divers modules comme la gestion des utilisateurs, la facturation, ou encore les documents d’entreprise.  
+- **Versionnement** : Adopte une approche stable avec des versions API claires (`v1`, `v2`, etc.).
+
+
+## Points de départ \{#start}
+
+### 1. Obtenez une clé API \{#get-key}  
+Connectez-vous à votre compte **Pro Gestion Soft** et rendez-vous dans l’espace développeur pour générer votre clé API. Cette clé est unique et personnelle.
+
+> La section developpeur n'est pas encore globalement disponible. Nous effectuons encore quelques vérifcations de securité et pourrons bientôt le deployer à grande échelle.
+
+### 2. Tester une requête simple \{#test-requete}
+
+Vous pouvez tester votre première requête en exécutant le code suivant pour récupérer les informations de votre profil :  
+
+```bash
+curl -X GET "https://***.com/v1/{ressource}"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"
+```
+
+> Nous allons donner plus de précision sur cette section bientôt.
+
+### 3. Structure de base d'une requête \{#base-structure}
+
+Chaque requête suit une structure standard :  
+
+- **Méthodes HTTP** : Utilisez `GET`, `POST`, `PUT` ou `DELETE` selon le type d'action.  
+- **URL** : Formatez vos requêtes en suivant la structure `https://***.com/v1/{ressource}`.  
+- **En-têtes** : Fournissez les informations nécessaires, comme l'authentification et le type de contenu.  
+- **Corps** : Ajoutez des données dans un format JSON structuré pour les requêtes `POST` et `PUT`.  
+
+
+## Exemples d'utilisation \{#use-case} 
+
+### Récupérer une liste de factures \{#get-invoices}
+
+```bash title="GET / Invoices"
+curl -X GET "https://***.com/v1/invoices"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"
+```
+
+### Créer une nouvelle facture \{#create-invoice}
+
+```bash title="POST / Invoices"
+curl -X POST "https://***.com/v1/invoices"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"  
+-H "Content-Type: application/json"  
+-d '{
+  "client_id": "12345",
+  "amount": 1000,
+  "due_date": "2024-12-15"
+}'
+```
+
+### Supprimer un utilisateur \{#delete-user}
+
+```bash title="DELETE / Users"
+curl -X DELETE "https://***.com/v1/users/12345"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"
+```
+
+:::tip Conditions et limitations
+-	***Limites de taux*** : Chaque compte dispose d’un quota mensuel d’appels API. Consultez vos limites dans la section Développeurs.
+- ***Données sensibles*** : Manipulez les données confidentielles avec soin et suivez les bonnes pratiques en matière de sécurité.
+- ***Teste et validation*** : Avant de déployer utilisez notre playground pour valider vos intégrations.
+- **Versionnement** : L’API est versionnée pour garantir une rétrocompatibilité. Actuellement, elle est à sa version `/v1/`.
+:::  

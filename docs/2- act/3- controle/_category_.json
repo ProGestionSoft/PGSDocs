@@ -1,0 +1,8 @@
+{
+  "label": "Centre de contrôle",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Recherche, commentaire, assistance et configuration de vos alertes et abonnements."
+  }
+}
