@@ -1,0 +1,78 @@
+---
+id: mfa
+sidebar_position: 3
+title: Multi-Factor Authentication
+description: Setting up enhanced security.
+---
+import styles from '@site/src/css/docs.module.css';
+ 
+
+# <i class="fas fa-lock"></i> Multi-Factor Authentication (MFA)
+
+<details>
+  <summary>Quick access to "SECURITY"</summary>
+
+  To quickly access the GENERAL section, simply type a keyword into the search bar to find the section without manually navigating through menus.
+
+  Here is a *[list](/docs/act/controle/search)* – not exhaustive – of supported search keywords.
+</details>
+
+Account security is a priority for **PRO GESTION SOFT**. To better protect your personal and sensitive information, we offer the option to enable multi-factor authentication (2FA). This system adds an extra layer of security by requiring validation at each login to confirm that you are the legitimate user of your account.
+
+## What is multi-factor authentication? \{#what}
+Multi-factor authentication, often abbreviated as 2FA or MFA, is a security method that requires two steps of verification to confirm your identity. In addition to the usual password, it adds a verification step via email to ensure that only you can access your account.
+
+Multi-factor authentication is crucial for:
+- Preventing unauthorized access by adding an extra layer of verification.
+- Strengthening the security of sensitive data and protecting your account from hacking attempts.
+- Providing users with peace of mind by adding a security barrier.
+
+## Enabling multi-factor authentication \{#enable}
+
+Follow the steps below to enable two-factor authentication on your account:
+- Log in to your account.
+- In the navigation interface, click on your profile icon to open the menu.
+- Click on Expand to access your **profile space**.
+- In your profile space, go to the **Security** section via the right-hand tabs.
+- Under the Two-Factor Authentication section, click on the **Enable** button.
+- Once this step is completed, two-factor authentication via email will be enabled on your account.
+
+### How does email authentication work? \{#how}
+From now on, each time you log in, you will need to go through a two-step validation process:
+- **Login with your credentials**: Enter your email address and usual password to log in.
+- **Email verification**: A verification email containing a validation code will be sent to the email address associated with your account. This code is for one-time use and expires in 15 minutes.
+- **Enter the code**: Input the received code in the login interface to finalize access to your account.
+
+:::warning CODE VALIDITY DURATION
+The validation code sent via email is temporary. Be sure to use it quickly, as it will expire after 15 minutes for security reasons. If the code expires, you will need to restart the process by requesting a new code.
+:::
+
+### What to do if you lose access to your email? \{#mail-lost}
+If you can no longer access the email address associated with your account, follow these steps to avoid being locked out:
+- **Update the email if logged in**: If you are still logged in, quickly update the email address before enabling two-factor authentication. This ensures that the verification code will be sent to a functional address.
+- **Contact technical support**: If you permanently lose access to the email, contact the support team, which can help you regain access after verifying your identity.
+
+:::tip Recommendations for Optimal MFA Usage
+- Keep your email secure: Make sure your email address is secure, with a strong password and 2FA enabled if possible. Your PRO GESTION SOFT account relies on the security of this email.
+- Do not share your code: The verification code received via email is personal. Do not share it with anyone to ensure your account's confidentiality.
+- Monitor suspicious logins: If you receive a verification code without attempting to log in, it may indicate an unauthorized access attempt. In this case, immediately change your password and contact support if necessary.
+:::
+
+## Disabling two-factor authentication \{#disable}
+
+If you wish to disable two-factor authentication via email, you can do so from the Security section of your Profile Space. Follow the same instructions as for [‘’Enabling Multi-Factor Authentication’’](#enable). The button will now be labeled "Disable."
+
+:::warning 
+Note that disabling two-factor authentication will reduce the security level of your account. It is recommended to keep it active to protect your information.
+:::
+
+## Tutorial: Enabling and disabling MFA \{#tuto}
+<div className={styles.ytbFrame}>
+  <iframe
+    src="https://www.youtube.com/embed/KAKnJ42iaKg"
+    title="Logging into PGS"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>

@@ -1,0 +1,73 @@
+```jsx live noInline
+  const Document = () => {
+  const [documents, setDocuments] = useState([]);
+  const [currentFile, setCurrentFile] = useState(null);
+  const [filePreview, setFilePreview] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setCurrentFile(file);
+      const objectUrl = URL.createObjectURL(file);
+      setFilePreview(objectUrl);
+    }
+  };
+
+  const handleUpload = () => {
+    if (currentFile) {
+      setDocuments([...documents, currentFile]);
+      setCurrentFile(null);
+      setFilePreview(null);
+    } else {
+      alert("Veuillez sélectionner un fichier à téléverser.");
+    }
+  };
+
+  const handleDelete = (file) => {
+    setDocuments(documents.filter((document) => document !== file));
+  };
+
+  return (
+    <div>
+      <h2>Simulateur de documents</h2>
+
+      <div>
+        <input
+          type="file"
+          onChange={handleFileChange}
+          accept=".pdf, .doc, .docx, .jpg, .png"
+        />
+        {filePreview && (
+          <div>
+            <h2>Aperçu</h2>
+            <div>
+              {currentFile.type.startsWith('image/') ? (
+                <img src={filePreview} alt="aperçu" style={{ maxWidth: '50%' }} />
+              ) : (
+                <p>Aperçu du fichier non disponible</p>
+              )}
+            </div>
+          </div>
+        )}
+        <button onClick={handleUpload} disabled={!currentFile}>
+          Télécharger le document
+        </button>
+      </div>
+
+      <div>
+        <h2>Documents téléchargés</h2>
+        <ul>
+          {documents.map((file, index) => (
+            <li key={index}>
+              <span>{file.name}</span>
+              <button onClick={() => handleDelete(file)}>Supprimer</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+render(<Document />);
+```

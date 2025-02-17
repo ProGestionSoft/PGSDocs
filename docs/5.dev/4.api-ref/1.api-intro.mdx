@@ -1,0 +1,60 @@
+---
+id: api-ref
+sidebar_position: 1
+title: Intro
+description: Intégration et personnalisation des fonctionnalités.
+---
+import styles from '@site/src/css/docs.module.css';
+import Feedback from '@site/src/components/Feedback';
+ 
+
+# <i class="fas fa-plug"></i> Documentation API
+
+Bienvenue dans la documentation de l'API PRO GESTION SOFT.
+
+Cette API repose sur une ***architecture REST***, garantissant une intégration simple et efficace. Toutes les requêtes et réponses sont ***formatées en JSON***  pour une intégration universelle et en respectant les codes de réponse HTTP standards.
+
+Pour utiliser effectuer certains appels API, vous devez disposer d'une ***clé API valide***. Celle-ci est requise pour authentifier vos requêtes et garantir un accès sécurisé aux ressources. Vous pouvez obtenir votre clé API depuis votre compte PRO GESTION SOFT dans la section "Développeurs".
+
+<a
+href="#"
+className={styles.ApiKeyBtn}> Obtenir une clé API </a>
+
+
+## URL de base \{#url}
+
+Toutes les requêtes doivent être effectuées via l'URL suivante :
+
+```bash
+https://***.com/v1/
+```
+
+## Requête avec cURL \{#requeste}
+
+```bash
+curl -X '{action}' \
+  'https://***.com/v1/{endpoint}' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer {api_key}' \
+  -d '{ "key1": "value1", "key2": "value2" }'
+```
+
+<details>
+  <summary>**Notes**</summary>
+  - **-X** : permet de spécifier la méthode HTTP.
+  - **[action]** : remplacez par l'action HTTP de la requêye (GET, POST, PUT, DELETE).
+  - **[endpoint]** : remplacez par l'endpoint spécifique que vous souhaitez interroger.
+  - **-H 'accept: \*/*\'** : définit le type de réponse attendu.
+  - **-H 'Authorization: Bearer [api_key]'** : ajoute la clé API pour l'authentification.
+  - **[api_key]** : remplacez par votre clé API personnelle.
+  - **-d** : utilisé pour envoyer des données (généralement, lors de requêtes POST ou PUT).
+</details>
+
+---
+
+<Feedback />
+
+
+
+
+

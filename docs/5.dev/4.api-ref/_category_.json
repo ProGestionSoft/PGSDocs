@@ -1,0 +1,8 @@
+{
+  "label": "API Référence",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Intégration et personnalisation des fonctionnalités."
+  }
+}

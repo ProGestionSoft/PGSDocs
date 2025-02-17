@@ -1,0 +1,97 @@
+---
+id: api-ref
+sidebar_position: 4
+title: API reference
+description: Integration and customization of features.
+---
+import styles from '@site/src/css/docs.module.css';
+ 
+
+# <i class="fas fa-plug"></i> API reference
+
+:::warning
+This documentation is incomplete and does not yet explore each resource and endpoint in detail.
+
+We will gradually complete this section with:
+- Accepted parameters.
+- Possible responses with status codes (`200 OK`, `400 Bad Request`, etc.).
+- Examples of requests and responses.
+:::
+
+Whether you're building a custom solution or automating processes, our API provides a powerful and flexible interface to access data and integrate our features directly into your own applications. Here's what you can do:
+  - **Task automation**: Connect and automate your workflows by leveraging real-time management data.
+  - **Custom integrations**: Create solutions tailored to your business needs.
+  - **Centralized access**: Interact with various Pro Gestion Soft modules via a unified interface.
+
+## Key features \{#features}
+
+- **RESTful API**: Follows REST standards, ensuring simple and efficient integration.
+- **Formats**: All requests and responses are formatted in JSON for universal integration.
+- **Security**: Each call is secured with authentication tokens based on the OAuth 2.0 protocol.
+- **Multi-module**: Interaction with various modules such as user management, billing, or company documents.
+- **Versioning**: Adopts a stable approach with clear API versions (`v1`, `v2`, etc.).
+
+
+## Getting started \{#start}
+
+### 1. Get an API key \{#get-key}  
+Log in to your **Pro Gestion Soft** account and go to the developer space to generate your API key. This key is unique and personal.
+
+> The developer section is not fully available yet. We are still doing some security checks and will soon deploy it at a larger scale.
+
+### 2. Test a Simple Request \{#test-requete}
+
+You can test your first request by running the following code to retrieve your profile information:
+
+```bash
+curl -X GET "https://***.com/v1/{resource}"  
+-H "Authorization: Bearer YOUR_AUTH_TOKEN"
+```
+
+> We will provide more details on this section soon.
+
+### 3. Basic Structure of a Request \{#base-structure}
+
+Each request follows a standard structure: 
+
+- **HTTP methods**: Use `GET`, `POST`, `PUT`, or `DELETE` depending on the action.
+- **URL**: Format your requests by following the structure `https://***.com/v1/{resource}`.
+- **Headers**: Provide necessary information such as authentication and content type.
+- **Body**: Add data in a structured JSON format for `POST` and `PUT` requests.  
+
+
+## Use case \{#use-case} 
+
+### Retrieve a list of invoices \{#get-invoices}
+
+```bash title="GET / Invoices"
+curl -X GET "https://***.com/v1/invoices"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"
+```
+
+### Create a new invoice \{#create-invoice}
+
+```bash title="POST / Invoices"
+curl -X POST "https://***.com/v1/invoices"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"  
+-H "Content-Type: application/json"  
+-d '{
+  "client_id": "12345",
+  "amount": 1000,
+  "due_date": "2024-12-15"
+}'
+```
+
+### Delete a user \{#delete-user}
+
+```bash title="DELETE / Users"
+curl -X DELETE "https://***.com/v1/users/12345"  
+-H "Authorization: Bearer VOTRE_JETON_D_AUTHENTIFICATION"
+```
+
+:::tip Conditions and Limitations
+- ***Rate limits***: Each account has a monthly API call quota. Check your limits in the Developer section.
+- ***Sensitive data***: Handle confidential data with care and follow best security practices.
+- ***Testing and validation***: Use our playground to validate your integrations before deploying.
+Versioning: The API is versioned to ensure backward compatibility. Currently, it is at version `/v1/`. 
+:::

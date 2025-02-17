@@ -1,0 +1,42 @@
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.CardContainer {
+  position: relative;
+  background: var(--WtB-Bg);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.CardContainer:hover {
+  border: 1px solid var(--pmr-clr);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.CardContainer h3 {
+  color: var(--txt-clr);
+  margin-bottom: var(--TitreMargBot);
+}
+
+.CardContainer:hover h3 {
+  text-decoration: none;
+}
+
+.CardContainer p {
+  color: var(--txt-clr);
+  margin-bottom: var(--TextMargBot);
+}

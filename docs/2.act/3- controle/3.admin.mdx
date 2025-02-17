@@ -1,0 +1,90 @@
+---
+id: admin-mgm
+sidebar_position: 3
+title: Co-administration
+description: Travail en équipe et répartition des tâches.
+---
+import styles from '@site/src/css/docs.module.css';
+import Feedback from '@site/src/components/Feedback';
+ 
+
+# <i class="fas fa-user-group"></i> Gestion de co-administration
+<img src="/img/docs/admin.png" alt="ADMINISTRATION" className={styles.docsImg} />
+
+<details>
+  <summary>Accéder rapidement à la section de « Co-administration »</summary>
+
+  Pour accéder rapidement à la section de Co-administration, saisissez simplement dans la barre de recherche un mot-clé de recherche pour trouver la section sans naviguer manuellement dans les menus.
+
+  Voici une *[liste](/docs/act/controle/search)* – none exhaustive – des mots clés de recherches pris en charge.
+</details>
+
+La co-administration permet de déléguer certaines responsabilités de gestion à d’autres utilisateurs de votre organisation, tout en maintenant un contrôle total sur leurs accès et leurs droits. Grâce à cette fonctionnalité, vous pouvez optimiser la gestion de votre compte tout en assurant une transparence et une sécurité maximales.
+
+
+## Inviter un co-administrateur \{#meet}
+:::warning 
+Un co-administrateur est associé à un seul compte. Il ne peut pas gérer plusieurs comptes avec une même adresse e-mail.
+
+Si un co-administrateur quitte l’entreprise ou ne doit plus utiliser son compte, il est recommandé de notifier l’équipe support pour effacer le compte de l’ancien Co-administrateur et rendre son adresse e-mail disponible pour un autre utilisateur.
+:::
+
+Pour inviter un Co-Administrateur, suivez ces étapes simples :
+- Rendez-vous sur la ***barre de contrôle***.
+- Cliquez sur l'icône "<i class="fas fa-lock"></i> ***Gestion des accès***" pour ouvrir la page dédiée.
+- Cliquez sur le bouton <span className={styles.blackBtn}><i class="fas fa-plus"></i> Inviter un Co-administrateur</span>.
+- Remplissez le formulaire d’invitation avec les informations nécessaires, notamment :
+
+> La date d’expiration de l’invitation correspond au délai après lequel le lien d’invitation deviendra invalide s’il n’est pas utilisé.
+
+Accédez à la section Invitations pour suivre l’état des invitations envoyées. Vous pouvez également annuler une invitation à tout moment si elle n’a pas encore été acceptée.
+
+
+## Gestion des accès \{#manage}
+Une fois qu’un Co-administrateur accepte l’invitation, vous avez un contrôle complet sur les accès et les permissions :
+- ***Révoquer ou suspendre l’accès*** : Si un Co-administrateur n’a plus besoin d’accéder au compte, utilisez le bouton <span className={styles.blueBtn}>Suspendre</span> pour révoquer son accès. Vous pouvez à tout moment Réactiver l’accès si nécessaire.
+- ***Gestion des droits*** : Chaque Co-administrateur peut avoir des droits spécifiques selon les besoins de votre entreprise. Ces droits sont répartis en quatre niveaux :
+   - ***Voir*** : Permet de visualiser les données d’une section ou d’un module.
+   - ***Ajouter*** : Permet d’ajouter de nouvelles données.
+   - ***Modifier*** : Autorise les modifications sur des données existantes.
+   - ***Supprimer*** : Permet de supprimer des données existantes.
+
+
+> Pour accorder les droits Ajouter, Modifier ou Supprimer, l’accès Voir doit d’abord être activé.
+
+:::note
+Pour des raisons de transparence, chaque action liée aux accès et aux droits, qu’il s’agisse d’une modification, d’une révocation ou d’un ajout, sera automatiquement notifiée au Co-administrateur concerné.
+:::
+
+
+## Pour le co-administrateur \{#for-coadmin}
+Chaque Co-administrateur peut consulter les droits qui lui ont été attribués grâce à la section "***Mes droits***"
+- Accédez à la barre de contrôle.
+- Cliquez sur l'icône <i class="fas fa-lock"></i> Gestion des accès.
+- Sélectionnez "***Mes droits***" pour afficher la liste des autorisations accordées.
+
+
+Dans cette section, le co-administrateur pourra voir les modules auxquels il a accès et le niveau de permission (voir, ajouter, modifier ou supprimer) attribué à chaque module.
+
+
+:::tip Bonnes pratiques pour la co-administration
+- ***Accordez des droits avec précaution*** : Veillez à attribuer uniquement les permissions nécessaires à chaque co-administrateur pour éviter des manipulations non souhaitées.
+- ***Mettez à jour les accès régulièrement*** : Vérifiez les droits et révoquez les permissions inutiles ou obsolètes.
+- ***Communiquez les politiques de sécurité*** : Informez vos co-administrateurs des règles à respecter concernant la confidentialité des données et l’utilisation de leurs droits.
+:::
+
+
+## Tutoriel : Gestion du co-administrateur
+<div className={styles.ytbFrame}>
+<iframe
+  src="https://www.youtube.com/embed/KAKnJ42iaKg"
+  title="Connexion sur PGS"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+</div>
+
+---
+
+<Feedback />

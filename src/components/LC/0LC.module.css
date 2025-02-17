@@ -1,0 +1,155 @@
+/* Congé */
+/*.leave-request-container {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.leave-request-form input,
+.leave-request-form select,
+.leave-request-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.leave-request-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leave-request-form button:hover {
+  background-color: #0056b3;
+}
+
+.confirmation-message {
+  text-align: center;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.leave-requests-list {
+  margin-top: 30px;
+}
+
+.leave-request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.leave-request-item button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leave-request-item button:hover {
+  background-color: #218838;
+}
+
+.leave-request-item button:nth-child(2) {
+  background-color: #e53935;
+}
+
+.leave-request-item button:nth-child(2):hover {
+  background-color: #d32f2f;
+}
+*/
+
+
+/* EVENT */
+/*.event-scheduler-container {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.event-form input,
+.event-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.event-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background-color: #0056b3;
+}
+
+.event-list {
+  margin-top: 30px;
+}
+
+.event-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.event-item h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.event-item p {
+  margin: 5px 0;
+}
+
+.event-item button {
+  padding: 5px 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event-item button:hover {
+  background-color: #d32f2f;
+}
+*/

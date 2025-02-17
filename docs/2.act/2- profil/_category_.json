@@ -1,0 +1,8 @@
+{
+  "label": "Gestion de profil",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Maintenant que vous disposez d'un compte, réglons ensemble quelques détails."
+  }
+}

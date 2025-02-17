@@ -1,0 +1,107 @@
+---
+title: Playground
+hide_table_of_contents: true
+---
+
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
+import styles from '@site/src/css/pages.module.css';
+
+import SelectorView from '@site/src/components/Playground/0SelectorView';
+import Translate, {translate} from '@docusaurus/Translate';
+
+
+<section className={styles.PgHeroSection}>
+  <div className={styles.PgHeroIntro}>
+    <div className={styles.PgHeroText}>
+      <h1>
+        <Translate
+          id="Pg-HeroTitleDesk"
+          description="Le titre de Hero sur Playground"
+          values={{
+            icon: <i className="fas fa-terminal"></i>,
+          }}>
+          {'Bienvenue dans le playground {icon}'}
+        </Translate>
+      </h1>
+
+      <h1>
+        <Translate
+          id="Pg-HeroTitleMob"
+          description="Le titre de Hero sur Playground"
+          values={{
+            icon: <i className="fas fa-terminal"></i>,
+          }}>
+          {'Bienvenue {icon}'}
+        </Translate>
+      </h1>
+
+      <p>
+        <Translate
+          id="Pg-HeroSubtitle"
+          description="Le sous-titre de Hero sur Playground"
+        >
+          {'Découvrez, testez, et expérimentez les fonctionnalités de notre plateforme.'}
+        </Translate>
+      </p>
+
+      <div className={styles.PgHeroLink}> 
+        <Link href="/docs/dev/playground#guide">
+          <Translate
+            id="Pg-HeroGuide"
+            description="Le lien du guide sur Hero de Playground"
+            values={{
+              icon: <i className="fas fa-question-circle"></i>,
+            }}>
+            {'{icon} Comment faire ?'}
+          </Translate>
+        </Link>
+
+        <span className={styles.LinkSep}> | </span>
+
+        <Link href="/docs/dev/playground#rules">
+          <Translate
+            id="Pg-HeroRules"
+            description="Le lien du regles sur Hero de Playground"
+            values={{
+              icon: <i className="fas fa-map-signs"></i>,
+            }}>
+            {'{icon} Précaution et manipulation'}
+          </Translate>
+        </Link>
+      </div>
+    </div>
+
+    <div className={styles.PgHeroImg}>
+      <ThemedImage
+        alt={
+              translate({
+                id: 'Pg-HeroImg',
+                message: 'API Référence',
+                description: 'Illustration de Hero sur Index',
+              })}
+        sources={{
+          light: useBaseUrl('/img/Pgd-ApiW.png'),
+          dark: useBaseUrl('/img/Pgd-ApiB.png'),
+        }}
+      />
+    </div>
+  </div>
+</section>
+
+<section className={styles.PgTestSection}>
+  <div className={styles.PgTestIntro}>
+    <h1><i className="fas fa-table-tennis-paddle-ball"></i> A vous de jouer</h1>
+    <p>Choisissez un des éléments dans la liste déroulante.</p>
+  </div>
+
+  <SelectorView />
+</section>
+
+
+<iframe
+  src="https://stackblitz.com/edit/pgsdocs?ctl=1&embed=1&file=README.md"
+  width="100%"
+  height="500px"
+></iframe>

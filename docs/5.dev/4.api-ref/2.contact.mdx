@@ -1,0 +1,69 @@
+---
+id: api-contact
+sidebar_position: 1000
+title: API Contact
+description: API Référence Contact.
+---
+import styles from '@site/src/css/docs.module.css';
+import Feedback from '@site/src/components/Feedback';
+import { Get, Post, Put, Delete } from '@site/src/components/HttpMethods';
+ 
+
+# <i class="fa-solid fa-share-from-square"></i> API formulaire de contact
+
+L'API Contact permet aux utilisateurs d’envoyer directement des messages au support de PRO GESTION SOFT sans quitter leur plateforme ou application. Grâce à cette intégration, les utilisateurs peuvent signaler des problèmes, poser des questions ou demander de l’assistance en toute simplicité.
+
+Cette API est essentielle pour garantir un support réactif et efficace aux utilisateurs intégrant PGS dans leurs systèmes.
+
+
+## Description de l’endpoint \{#description}
+
+- **Url de base** : `https://***.com/v1/contact/send-message`
+- **Méthode** : <Post />
+- **Description** : Permet d'envoyer un message via le formulaire de contact.
+- **Paramètres de requête** :
+
+| Paramètres     | Type   | Obligatoire | Description                   |
+| -------------- | ------ | ----------- | ----------------------------- |
+| `fullname`     | String | Oui         | Nom complet de l'expéditeur   |
+| `emailAddress` | String | Oui         | Adresse email de l'expéditeur |
+| `object`       | String | Oui         | Objet du message              |
+| `message`      | String | Oui         | Contenu du message            |
+
+
+## Exemple de requête \{#requeste}
+
+```bash
+  curl -X 'POST' \
+    'https://***.com/v1/contact/send-message?fullname=Mon%20nom%20complet&emailAddress=exemple%40gmail.com&object=Mon%20object&message=Le%20contenu%20du%20message' \
+    -H 'accept: */*' \
+    -d ''
+```
+
+## Réponse attendue (200 - OK) \{#answer}
+
+```bash
+{
+  "status": true,
+  "data": {
+    "createdAt": 1739667037409,
+    "updatedAt": 1739667037409,
+    "id": 8,
+    "fullname": "Mon nom complet",
+    "emailAddress": "exemple@gmail.com",
+    "object": "Mon object",
+    "message": "Le contenu du message"
+  }
+}
+```
+
+## Erreurs possibles \{#error}
+
+| Code HTTP | Message               | Cause                            |
+| --------- | --------------------- | -------------------------------- |
+| `400`     | Bad Request           | Paramètres manquants ou invalides|
+| `500`     | Internal Server Error | Problème interne du serveur      |
+
+---
+
+<Feedback />

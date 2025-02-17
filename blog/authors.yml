@@ -1,0 +1,33 @@
+Steve:
+  name: Steve Aster Afovo
+  title: Responsable Recherche et Dévéloppement
+  image_url: /img/Blg-AutSteve.jpg 
+  page:
+    permalink: '/SteveAsterAfovo'
+  socials:
+    github: SteveAsterAfovo
+    linkedin: SteveAsterAfovo
+    x: SteveAsterAfovo
+    youtube: SteveAsterAfovo
+    Linktree: https://linktr.ee/SteveAsterAfovo
+
+
+Delluc:
+  name: Delluc Dotou Hounmenoun
+  title: Responsable financier
+  image_url: /img/Blg-AutDelluc.jpg
+  page:
+    permalink: '/DellucHounmenou'
+  socials:
+    Facebook: https://facebook.com/DellucDotou.Hounmenou
+  
+
+
+Marcias:
+  name: U. Marcias Laleye
+  title: Responsable commercial
+  image_url: /img/Blg-AutMarcias.jpg
+  page:
+    permalink: '/MarciasLaleye'
+  socials:
+    Facebook: https://facebook.com/Marcias.McLaleye

@@ -1,0 +1,8 @@
+{
+  "label": "Modules de gestion",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Accès aux modules, optimisations de gestion."
+  }
+}

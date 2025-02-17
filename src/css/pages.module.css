@@ -1,0 +1,613 @@
+/* GENERAL */
+.mainContent {
+  padding: 0;
+}
+
+
+/* COMMUN */
+.IntroSection h1,
+.HelpSection h1 {
+  color: var(--pmr-clr) !important;
+}
+.IntroSection h1,
+.UserSection h1,
+.DocsSection h1,
+.HelpSection h1 {
+  margin-bottom: var(--TitreMargBot);
+}
+
+.IntroSection p,
+.UserSection p,
+.DocsSection p,
+.HelpSection p {
+  margin-bottom: var(--TextMargBot);
+}
+
+.IntroCard h3,
+.UserCard h3,
+.DocsCard h3,
+.HelpSection h3 {
+  color: var(--txt-clr);
+  margin-bottom: var(--TitreMargBot);
+}
+
+.IntroCard p,
+.UserCard p {
+  color: var(--txt-clr);
+  margin-bottom: var(--TextMargBot);
+}
+
+
+/* HERO */
+.HeroContainer {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.HeroBanner {
+  background-image: var(--HeroBg);
+  background-size: contain;
+  background-position: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.HeroImage {
+  flex: 0 1 35%;
+  object-fit: cover;
+  max-width: 35%;
+  transform: skew(10deg);
+}
+
+.HeroText {
+  flex: 1;
+  text-align: center;
+}
+
+.HeroTitle {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--BtW-clr);
+}
+
+.HeroTitleVar {
+  color: var(--sdr-clr);
+  text-shadow: -2px 2px 1px var(--WtB-clr);
+  transition: all 0.3s ease-in-out;
+}
+
+.HeroTitleVar:hover {
+  color: var(--pmr-clr);
+  text-shadow: none;
+}
+
+.HeroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--BtW-clr);
+}
+
+.HeroBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+/* IntroSection */
+.IntroSection { 
+  text-align: center;
+  padding: var(--SectionPad);
+}
+
+.IntroContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.IntroCard {
+  position: relative;
+  background: var(--WtB-Bg);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: calc(33.33% - 2rem);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.IntroCard:hover {
+  border: 1px solid var(--pmr-clr);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.IntroCard:hover .IntroBGImg {
+  scale: 1.5;
+  transition: all 0.3s ease;
+}
+
+.IntroContainer:hover .IntroCard:not(:hover) {
+  border: 1px solid var(--BtW-clr);
+}
+
+.IntroCard h3 {
+  color: var(--sdr-clr) !important;
+}
+
+.IntroCard:hover h3 {
+  color: var(--pmr-clr) !important;
+}
+
+.IntroBGImg {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: 0;
+  transition: 0.6s ease;
+}
+
+.iconContainer {
+  position: relative;
+  text-align: center;
+  margin-bottom: var(--TextMargBot);
+  z-index: 1;
+}
+
+.IntroIcone {
+  width: 40%; 
+  height: auto;
+}
+
+
+/* UserSection */
+.UserSection {
+  background-color: var(--BtG-Bg);
+  display: flex;
+  margin: auto;
+  padding: 2rem;
+  align-items: center; 
+}
+
+.UserText { 
+ width: 80%;
+}
+
+.UserCard {
+  padding: 0 20px;
+  width: 80%;
+}
+
+.UserImgContainer {
+  flex: 0 1 40%;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserImg {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.UserCard h3 {
+  color: var(--sdr-clr) !important;
+}
+
+
+/* DocsSection */
+.DocsSection {
+  text-align: center;
+  padding: var(--SectionPad);
+}
+
+.DocsSection h1 {
+  text-align: right;
+  margin-right: 5rem;
+}
+
+.DocsContainer {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.DocsContainer > div {
+  width: 100%;
+}
+
+.DocsCard {
+  background: var(--PLtSL);
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem auto;
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid var(--BtW-clr);
+  width: 80%;
+  height: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+}
+
+.DocsCard:hover {
+  box-shadow: 0 5px 2px var(--txt-clr);
+  border: 1px solid var(--pmr-clr);
+  transition: all 0.3s ease-in-out;
+}
+
+.DocsCard h3  {
+  color: var(--sdr-clr);
+}
+
+.DocsCard:hover .DocsCardTitle h3  {
+  color: var(--BtW-clr);
+  transition: all 0.3s ease-in-out;
+}
+
+.DocsCardTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.DocsCardTitle a {
+  color: var(--sdr-clr);
+}
+
+.DocsCardTitle a:hover {
+  color: var(--BtW-clr);
+  transform: translateX(10px) scale(1.5);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* HelpSection */
+.HelpSection {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  padding: var(--SectionPad);
+  align-items: center;
+}
+
+.HelpImgContainer {
+  flex: 0 1 30%;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.HelpImg {
+  max-width: 100%;
+  height: auto;
+  box-shadow: -10px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.HelpText {
+  background-color: var(--BtG-Bg);
+  width: 80%;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--BtW-clr);
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.HelpContCard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.HelpCard {
+  background-color: var(--WtB-clr);
+  border: 1px solid var(--BtW-clr);
+  width: calc(33.33% - 2rem);
+  height: auto;
+  min-height: 250px;
+  margin: auto;
+  margin-bottom: var(--TextMargBot);
+  padding: 1rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.HelpCard:hover {
+  border: 1px solid var(--pmr-clr);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(-5px);
+}
+
+.HelpCard:hover h3 {
+  color: var(--pmr-clr);
+}
+
+.HelpCard a {
+  color: var(--sdr-clr);
+  text-decoration: none;
+}
+
+.HelpCard a:hover {
+  color: var(--pmr-clr);
+  text-decoration: underline;
+}
+
+.HelpCard a i {
+  display: none;
+}
+
+.HelpCard a:hover i {
+  display: inline;
+  color: var(--txt-clr);
+}
+
+.ToggleButton {
+  background-color: var(--pmr-clr);
+  color: var(--WtB-clr);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width:auto;
+  margin: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ToggleButton:hover {
+  background-color: var(--sdr-clr);
+}
+
+
+/* playground */
+.PgHeroSection,
+.PgTestSection {
+  background-color: var(--BtG-Bg);
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0 2rem; 
+}
+
+.PgHeroIntro {
+  display: flex;
+  align-items: center;
+}
+
+.PgHeroText { 
+  width: 80%;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.PgHeroText { 
+  width: 80%;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.PgHeroText > h1:nth-of-type(1) {
+  display: block;
+}
+
+.PgHeroText > h1:nth-of-type(2) {
+  display: none;
+}
+
+.PgHeroLink a {
+  color: var(--txt-clr);
+}
+
+.PgHeroLink a:nth-of-type(2) {
+  animation: ChangeColor 2s ease-in-out infinite alternate;
+}
+
+@keyframes ChangeColor {
+  from {
+     color: inherit;
+     opacity: 0.6;
+   }
+   to {
+     color: red;
+     opacity: 1;
+   }
+}
+
+.PgHeroImg {
+  flex: 0 1 30%;
+  max-width: 30%;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 1px var(--pmr-clr));
+}
+
+.PgTestSection {
+  background-color: transparent !important;
+  
+}
+
+.PgTestIntro {
+  text-align: right;
+}
+
+
+
+/* MEDIA SCREEN */
+@media screen and (max-width: 768px) {
+  /* HERO */
+  .HeroBanner {
+    padding: 2rem;
+  }
+
+  .HeroContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .HeroImage {
+    display: none;
+  }
+
+  .HeroTitle {
+    font-size: 1.8rem;
+  }
+
+  .HeroSubtitle {
+    font-size: 1rem;
+  }
+
+  .HeroBtns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* IntroSection */
+  .IntroContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .IntroCard {
+    width: 80%; 
+    margin: 0.5rem 0;
+  }
+
+  /* UserSection */
+  .UserSection {
+    flex-direction: column;
+  }
+
+  .UserCard {
+    padding: 0;
+    width: 100%;
+  }
+
+  .UserText {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .UserImage {
+    flex: 0 1 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* UserSection */
+  .DocsSection {
+    padding: 1rem 2rem;
+  }
+
+  .DocsCard {
+    width: 100%;
+    height: auto;
+  }
+
+  .DocsSection h1 {
+    text-align: center;
+    margin: 0 0 1rem; 
+  }
+
+  .DocsContainer {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .DocsContainer > div {
+    width:auto;
+  }
+
+  /* HelpSection */
+  .HelpSection {
+    display: block;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+
+  .HelpImg {
+    display: none;
+  }
+
+  .HelpContCard {
+    display: flex;
+  }
+
+  .HelpCard {
+    width: 80%;
+    flex-wrap: wrap; 
+    min-height: auto;
+  }
+
+  .HelpText {
+    background-color: transparent !important;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 10px;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Playground */
+  .PgHeroIntro {
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .PgHeroText { 
+    padding-right: 0;
+    align-items: center;
+   }
+
+   .PgHeroText > h1:nth-of-type(1) {
+    display: none;
+  }
+
+  .PgHeroText > h1:nth-of-type(2) {
+    display: block;
+  }
+
+   .PgHeroLink {
+    display: grid;
+  }
+
+  .LinkSep {
+    display: none;
+  }
+
+  .PgHeroImg {
+    display: none;
+  }
+
+  .PgTestIntro {
+    text-align: right;
+  }
+}
+

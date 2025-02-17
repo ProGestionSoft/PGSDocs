@@ -1,0 +1,21 @@
+.Http {
+  color: white;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+
+.Get {
+  background-color: #00acc1;
+}
+
+.Post {
+  background-color: #ec407a;
+}
+
+.Put {
+  background-color: #66bb6a;
+}
+
+.Delete {
+  background-color: #e53935;
+}

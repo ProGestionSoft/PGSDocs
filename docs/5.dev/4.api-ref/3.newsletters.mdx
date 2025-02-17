@@ -1,0 +1,60 @@
+---
+id: api-newsletter
+sidebar_position: 1001
+title: API Newsletter
+description: API Référence Contact.
+---
+import styles from '@site/src/css/docs.module.css';
+import Feedback from '@site/src/components/Feedback';
+import { Get, Post, Put, Delete } from '@site/src/components/HttpMethods';
+ 
+
+# <i class="fa-solid fa-newspaper"></i> API newsletters
+
+L'API Newsletter permet aux utilisateurs de s'abonner automatiquement aux newsletters de PRO GESTION SOFT directement depuis une plateforme tierce. Grâce à cette API, les entreprises et développeurs peuvent offrir à leurs utilisateurs un moyen simple de rester informés des actualités, mises à jour et nouvelles fonctionnalités de PGS.
+
+Cette API est idéale pour les plateformes souhaitant informer leurs utilisateurs des évolutions de PGS sans effort supplémentaire.
+
+
+## Description de l’endpoint \{#description}
+
+- **Url de base** : `https://***.com/v1/public/newsletter/subscribe`
+- **Méthode** : <Post />
+- **Description** : Permet à un utilisateur de s'inscrire à la newsletter.
+- **Paramètres de requête** :
+
+| Paramètres     | Type   | Obligatoire | Description                     |
+| -------------- | ------ | ----------- | ------------------------------- |
+| `lastname`     | String | Oui         | Nom de l'utilisateur            |
+| `firstname`    | String | Oui         | Prénom de l'utilisateur         |
+| `emailAddress` | String | Oui         | Adresse e-mail de l'utilisateur |
+
+
+## Exemple de requête \{#requeste}
+
+```bash
+  curl -X 'POST' \
+    'https://***.com/v1/contact/send-message?lastname=Mon%20nom%20de%20famille&firstname=Mon%20prénom&emailAddress=exemple%40gmail.com' \
+    -H 'accept: application/json' \
+    -d ''
+```
+
+## Réponse attendue (200 - OK) \{#answer}
+
+```bash
+{
+  "status": true,
+  "message": "Vous êtes déjà abonné à notre newsletter."
+}
+```
+
+## Erreurs possibles \{#error}
+
+| Code HTTP | Message               | Cause                            |
+| --------- | --------------------- | -------------------------------- |
+| `400`     | Bad Request           | Paramètres manquants ou invalides|
+| `500`     | Internal Server Error | Problème interne du serveur      |
+
+---
+
+<Feedback />

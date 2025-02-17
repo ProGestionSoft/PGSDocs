@@ -1,0 +1,81 @@
+.docsImg {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.docsImg:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.blueBtn {
+  background-color: blue;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.greenBtn {
+  background-color: darkgreen;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.redBtn {
+  background-color: red;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.blackBtn {
+  background-color: black;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.arrowHire {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+
+.ytbFrame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; 
+}
+
+.ytbFrame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ApiKeyBtn {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--BtW-clr);
+  border: 2px solid var(--pmr-clr);
+}
+
+.ApiKeyBtn:hover {
+  background-color: var(--pmr-clr);
+  color: var(--WtB-clr);
+  text-decoration: none;
+}
