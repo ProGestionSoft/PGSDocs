@@ -9,6 +9,7 @@ import Feedback from '@site/src/components/Feedback';
  
 
 # <i class="fas fa-file-alt"></i> Documents
+<img src="/img/docs/docs.png" alt="DOCUMENTS" className={styles.docsImg} />
 
 <details>
   <summary>Accéder rapidement à « DOCUMENTS »</summary>
@@ -19,8 +20,79 @@ import Feedback from '@site/src/components/Feedback';
 </details>
 
 
+Le module Documents permet de centraliser, d'organiser et de sécuriser les fichiers de l’entreprise. Il offre une gestion simplifiée des documents avec un accès rapide et un stockage optimisé.
+
+
+## Ajouter un Document \{#add-docs}
+
+- Dans le menu des modules, ***sélectionnez Documents***, puis cliquez sur le bouton <span className={styles.blackBtn}><i class="fas fa-plus"></i> Importer un fichier</span>.
+- Une fois dans la page dédiée à l'importation, ***sélectionnez le dossier*** dans lequel le document sera stocké.
+- ***Glisser-déposer*** directement les fichiers dans la zone d’importation ou ***Parcourir*** votre disque local pour sélectionner les fichiers manuellement.
+- Patientez le chargement des fichiers.
+
+:::tip
+Si vous pensez avoir télécharger un fichier par erreur, cliquez sur le bouton <i className="fa-solid fa-trash" style={{ color: '#e11432', cursor: 'pointer' }}></i> pour supprimer le fichier ou annuler son importation.
+:::
+
+
+## Favoris \{#favorite}
+
+L’ajout d’un document aux favoris vous permet de le retrouver plus facilement sans avoir à effectuer de recherches. C'est particulièrement utile pour les fichiers que vous utilisez régulièrement.
+
+### Ajouter un document à vos favoris \{#add-favorite}
+Deux méthodes pour ajouter un document aux favoris
+
+#### 1. Depuis la page principale des documents \{#fav-from-principale}
+
+- ***Localisez le document*** dans le tableau des fichiers.
+- ***Cliquez sur l'icône ❤️*** située à côté du document.
+
+Si le document figure dans la section "***Documents récents***", vous pouvez également cliquer sur l'icône ❤️ correspondante.
+
+#### 2. Depuis l'affichage détaillé du document \{#fav-from-details}
+
+- ***Ouvrez le document*** en cliquant dessus.
+- Cliquez sur le bouton <span className={styles.redBtn}>Ajouter aux favoris</span> en bas du fichier.
+
+
+> Tous les documents ajoutés aux favoris sont accessibles via ***Documents > Favoris***.
+
+
+### Retirer un document des favoris \{#remove-favorite}
+
+Suivez la même procédure que [l’ajout](#add-favorite), puis cliquez de nouveau sur l’icône ❤️ pour le retirer des favoris.
+
+
+## Archiver ou désarchiver un document \{#archive}
+
+L'archivage permet de mettre un document en veille tout en le conservant. Un fichier archivé reste disponible, mais il n’apparaît plus dans la liste principale des documents actifs.
+
+### Ajouter un document à vos archives \{#add-archive}
+Deux méthodes pour archiver un document
+
+#### 1. Depuis la page principale des documents \{#arch-from-principale}
+
+- ***Localisez le document*** dans le tableau des fichiers.
+- ***Selectionnez le fichier*** à archiver.
+- Cliquez sur l'icône <i class="fa-solid fa-box-archive"></i> "Archives" dans la barre d’outils.
+
+
+#### 2. Depuis l'affichage détaillé du document \{#arch-from-details}
+
+- ***Ouvrez le document*** en cliquant dessus.
+- Cliquez sur le bouton <span className={styles.blueBtn}>Archiver</span>.
+
+
+> Tous les documents archivés sont disponibles via ***Documents > Archives***.
+
+
+### Désarchiver un document \{#remove-archive}
+
+Suivez la même procédure que [l'archivage](#add-archive), puis cliquez de nouveau sur l’icône <i class="fa-solid fa-box-archive"></i> pour restaurer le fichier dans la liste principale.
+
+
 ## Tutoriel : Gérer les documents
-<div className={styles.ytbFrame}>
+<div className={styles.FrameMob}>
 <iframe
   src="https://www.youtube.com/embed/KAKnJ42iaKg"
   title="Connexion sur PGS"
@@ -29,5 +101,7 @@ import Feedback from '@site/src/components/Feedback';
   allowfullscreen>
 </iframe>
 </div>
+
+--- 
 
 <Feedback />

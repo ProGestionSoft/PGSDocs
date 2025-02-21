@@ -4,6 +4,7 @@
   height: auto;
   margin: auto;
   margin-bottom: 20px;
+  transition: all 0.5s;
 }
 
 .docsImg:hover {
@@ -12,10 +13,15 @@
 }
 
 .blueBtn {
-  background-color: blue;
+  background-color: #0072ff;
   color: white;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.blueBtn:hover {
+  background-color: #02358b;
 }
 
 .greenBtn {
@@ -23,6 +29,7 @@
   color: white;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .redBtn {
@@ -30,6 +37,11 @@
   color: white;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.redBtn:hover {
+  background-color: rgb(252, 102, 99);
 }
 
 .blackBtn {
@@ -37,29 +49,44 @@
   color: white;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.orangeBtn {
+  background-color: orange;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whiteBtn {
+  background-color: rgb(241, 240, 240);
+  color: black;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px black solid;
+  cursor: pointer;
+}
+
+.blueOutBtn {
+  border: 1px solid #0072ff;
+  color: #0072ff;
+  padding: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blueOutBtn:hover {
+  background-color: #0072ff;
+  color: white;
 }
 
 .arrowHire {
   background-color: black;
   color: white;
   padding: 5px 10px;
-}
-
-
-.ytbFrame {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; 
-}
-
-.ytbFrame iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  cursor: pointer;
 }
 
 .ApiKeyBtn {
@@ -78,4 +105,21 @@
   background-color: var(--pmr-clr);
   color: var(--WtB-clr);
   text-decoration: none;
+}
+
+.FrameMob {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; 
+}
+
+.FrameMob iframe,
+.FrameMob video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

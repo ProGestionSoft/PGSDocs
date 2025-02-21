@@ -10,5 +10,205 @@ import Feedback from '@site/src/components/Feedback';
 
 # <i class="fas fa-window-restore"></i> Iframe dans PGSThèque
 
+PGSthèque est un cloud sécurisé permettant de stocker et gérer des documents d’entreprise. Grâce aux iframes, il est possible d'afficher ces documents sur des sites tiers de manière sécurisée, sans nécessiter d'authentification ni de token. Cette méthode assure un accès direct aux fichiers tout en préservant leur confidentialité.
+
+Les iframes permettent d'intégrer différents types de documents tels que Excel, Word, PowerPoint, PDF, images et HTML dans des pages web.
+
+Ils utilisent un paramètre du fournisseur de la frame et les paramètres link fournis par PRO GESTION SOFT API.
+
+### Paramètres du lien \{#frame-link}
+
+| Paramètre                   | Valeur                                   | Observation                          |
+|-----------------------------|------------------------------------------|--------------------------------------|
+| ***Fournisseur***           | `Paramètre du fournisseur`               | En fonction du fournisseur           |
+| ***Lien (src)***            | Lien intégré.                            | -                                    |
+| ***URL de l'API document*** | `https://***.com/api/v1/admin/document/` | Fournis par PRO GESTION SOFT API     |
+| ***Url du fichier***        | `chiffrement/nom-du-fichier`             | Récuperer l'url depuis un navigateur |
+
+
+## Intégration de fichiers Office (Excel, Word, PowerPoint) \{#office}
+
+<div className={styles.FrameMob}>
+<iframe
+  width="862"
+  height="422"
+  frameborder="0"
+  scrolling="no"
+  src="https://view.officeapps.live.com/op/embed.aspx?src=https://api.pgs.ctrlengine.com:443/api/v1/admin/document/5QKWaNtpp2a/iframe-pptx.pptx
+  &waccluster=PNL1">
+</iframe>
+</div>
+
+Les fichiers ***Excel***, ***Word*** et ***PowerPoint*** peuvent être affichés directement via le ***visionneur Office en ligne***.
+
+#### Décomposition des paramètres \{#office-frame}
+
+| Paramètre         | Description                                       | Valeur                                                    | Exemple          |
+|-------------------|---------------------------------------------------|-----------------------------------------------------------|------------------|
+| ***width***       | Largeur en pixels de l'iframe.                    | Nombre positif                                            | 862              |
+| ***height***      | Hauteur en pixels de l'iframe.                    | Nombre positif                                            | 422              |
+| ***frameborder*** | Affichage de la bordure de l'iframe.              | ***0*** (sans bordure) ou ***1*** (avec bordure)          | 0                |
+| ***scrolling***   | Activaction du défilement.                        | ***no*** (sans défilement) ou ***yes*** (avec défilement) | no               |
+| ***src***         | URL du fichier à afficher.                        | Voir *[paramètres du lien](#frame-link)*                  | -                |
+| ***waccluster***  | Paramètre technique de Microsoft.                 | imbriqué dans "src" (ex: &waccluster=PNL1)                | &waccluster=PNL1 |
+| ***Fournisseur*** | `https://view.officeapps.live.com/op/embed.aspx?` | Fourni par Microsoft Office live                         | -                |
+
+<details>
+  <summary>**Exemple de lien pour office**</summary>
+
+  `src="https://view.officeapps.live.com/op/embed.aspx?src=https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier &waccluster=PNL1"`
+</details>
+
+---
+
+## Intégration de fichiers PDF \{#pdf}
+
+<div className={styles.FrameMob}>
+<iframe
+    width="862"
+    height="422"
+    frameborder="0"
+    src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://api.pgs.ctrlengine.com:443/api/v1/admin/document/AcaPqxhxxZ5/iframe-pdf.pdf">
+</iframe>
+</div>
+
+Les ***fichiers PDF*** sont affichés en utilisant ***Mozilla PDF.js Viewer***.
+
+#### Décomposition des paramètres \{#pdf-frame}
+
+| Paramètre         | Description                                       | Valeur                                           | Exemple |
+|-------------------|---------------------------------------------------|--------------------------------------------------|-------- |
+| ***width***       | Largeur en pixels de l'iframe.                    | Nombre positif                                   | 862     |
+| ***height***      | Hauteur en pixels de l'iframe.                    | Nombre positif                                   | 422     |
+| ***frameborder*** | Affichage de la bordure de l'iframe.              | ***0*** (sans bordure) ou ***1*** (avec bordure) | 0       |
+| ***src***         | URL du fichier à afficher.                        | Voir *[paramètres du lien](#frame-link)*           | -       |
+| ***Fournisseur*** | https://mozilla.github.io/pdf.js/web/viewer.html? | Fourni paMozilla PDF.js Viewer                  | -       |
+
+<details>
+  <summary>**Exemple de lien pour PDF**</summary>
+
+  `src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier"`
+</details>
+
+---
+
+## Intégration d'images (JPEG, JPG, PNG et GIF) \{#img}
+
+<a>
+  <img src="https://api.pgs.ctrlengine.com:443/api/v1/admin/document/hWe2UXGkdXe/iframe-img.gif"
+  width="862"
+  height="auto" />
+</a>
+
+Les images peuvent être affichées avec la balise `<img />`.
+
+#### Décomposition des paramètres \{#img-frame}
+
+| Paramètre        | Description                                                  | Valeur                 | Exemple |
+|------------------|--------------------------------------------------------------|------------------------|-------- |
+| href             | URL de destination si clix sur l'image (Falcultaif).         | Lien de destination    | -       |
+| ***`<a> </a>`*** | Envelopper l'image dans la balise `</a>` pour créer un lien. | Paramètre de l'image   | -       |
+| ***`<img />`***  | Envelopper le lien de l'image dans la balise `<img />`.      | Lien de l'image        | -       |
+| ***width***      | Largeur en pixels de l'iframe.                               | Nombre positif         | 862     |
+| ***height***     | Hauteur en pixels de l'iframe.                               | Nombre positif ou auto | auto    |
+
+<details>
+  <summary>**Exemple de lien pour image**</summary>
+
+  `<img src="https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier" />`
+</details>
+
+---
+
+## Intégration de média (video, audio) \{#media}
+
+<div className={styles.FrameMob}>
+<video
+  width="862"
+  height="422"
+  controls>
+  <source src="https://api.pgs.ctrlengine.com:443/api/v1/admin/document/r0nfCSsxihf/iframe-mp4.mp4" type="video/mp4" />
+  Votre navigateur ne supporte pas la vidéo.
+</video>
+</div>
+
+
+Les médias peuvent être affichées avec la balise `<video />` ou `<audio />` selon le type de média intégré.
+
+#### Décomposition des paramètres \{#media-frame}
+
+| Paramètre                | Description                                              | Valeur                      |
+|--------------------------|----------------------------------------------------------|-----------------------------|
+| ***`<video> </video>`*** | Vidéo uniquement.                                        | -                           |
+| ***`<audio> </audio>`*** | Audio uniquement.                                        | -                           |
+| ***`<source />`***       | Envelopper le lien du média dans la balise `<source />`. | Lien du média               |
+| ***`type />`***          | Type du média.                                           | `video/mp4` ou `audio/mpeg` |
+| ***Message***            | Alerte en cas d'erreur d'affichage                       | Texte                       |
+| ***Attribut relatif***   | Largeur en pixels de l'iframe.                           | *[Attribut](#media-attrib)* |
+
+
+#### Liste des attributs importants \{#media-attrib}
+
+| Attribut                 | Audio 🎵 | Vidéo 🎬 | Description                                         |
+|--------------------------|----------|-----------|-----------------------------------------------------|
+| `controls` (obligatoire) | ✅       | ✅       | Affiche les boutons natifs (play, pause, etc.).     |
+| `autoplay`               | ✅       | ✅       | Joue automatiquement après le chargement.           |
+| `loop`                   | ✅       | ✅       | Relance après la fin.                               |
+| `muted`                  | ✅       | ✅       | Coupe le son dès le départ.                         |
+| `preload`                | ✅       | ✅       | Gère le préchargement (`auto`, `metadata`, `none`). |
+| `poster`                 | ❌       | ✅       | Affiche une image avant lecture (uniquement vidéo). |
+| `width` / `height`       | ❌       | ✅       | Définit la taille d’affichage de la vidéo.          |
+
+
+#### Explication de `preload` \{#media-preload}
+
+| Valeur      | Effet                                                                |
+|-------------|----------------------------------------------------------------------|
+| `auto`      | Charge tout le fichier avant même que l’utilisateur appuie sur play. |
+| `metadata`  | Charge uniquement les informations de fichier (durée, format).       |
+| `none`      | Ne charge rien avant que l’utilisateur appuie sur play.              |
+
+<details>
+  <summary>***Exemple de lien pour video***</summary>
+
+  `<source src="https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier" type="video/mp4" />`
+</details>
+
+<details>
+  <summary>***Exemple de lien pour audio***</summary>
+
+  `<source src="https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier" type="audio/mpeg" />`
+</details>
+
+---
+
+## Intégration de fichiers HTML \{#html}
+
+<div className={styles.FrameMob}>
+<iframe
+    src="https://api.pgs.ctrlengine.com:443/api/v1/admin/document/eJS6yy3lWps/iframehtml.html"
+    width="862"
+    height="422">
+</iframe>
+</div>
+
+Les fichiers HTML stockés sur PGS peuvent être intégrés directement via une iframe.
+
+#### Décomposition des paramètres \{#html-frame}
+
+| Paramètre        | Description                           | Valeur          | Exemple |
+|------------------|---------------------------------------|-----------------|-------- |
+| ***`<iframe>`*** | Envelopper le fichier dans `<frame>`. | -               |-        |
+| ***`src`***      | URL du fichier à afficher.            | Lien de l'image | -       |
+| ***width***      | Largeur en pixels de l'iframe.        | Nombre positif  | 862     |
+| ***height***     | Hauteur en pixels de l'iframe.        | Nombre positif  | 422   |
+
+<details>
+  <summary>**Exemple de lien pour fichier HTML**</summary>
+
+  `<img src="https://***.com/api/v1/admin/document/chiffrement/nom-du-fichier" />`
+</details>
+
+---
 
 <Feedback />

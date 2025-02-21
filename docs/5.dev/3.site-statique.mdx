@@ -8,7 +8,52 @@ import styles from '@site/src/css/docs.module.css';
 import Feedback from '@site/src/components/Feedback';
  
 
-# <i class="fas fa-globe"></i> Intégré un site web statique
+# <i class="fas fa-globe"></i> Intégration des sites statiques
 
+Un **site statique** est une collection de fichiers qui ne change pas dynamiquement. Contrairement aux sites dynamiques qui interagissent avec des bases de données et génèrent du contenu en temps réel, un site statique est constitué de fichiers fixes comme des pages HTML, CSS et JS. Tous les éléments du site sont présents dans le fichier, et une fois créé, il ne change pas, sauf si l'on modifie manuellement les fichiers source.
+
+- **HTML** : Structure de la page web.
+- **CSS** : Mise en forme et styles visuels.
+- **JavaScript** : Fonctionnalités interactives et dynamiques sur la page, bien que limitée pour un site statique.
+
+Dans l’écosystème PGS, les sites statiques sont traités et intégrés d'une manière spécifique. Ils sont importés comme des documents sur PGS Cloud, où ils sont ensuite compilés et rendus sous forme de pages web directement accessibles via un visionneur dédié dans **PGS Thèque**.
+
+
+## Importation des sites statiques dans PGS Cloud \{#import}
+
+1. **Préparation du fichier HTML**  
+   Assurez-vous que votre fichier HTML est complet et qu’il contient tous les éléments nécessaires : code HTML, JavaScript et CSS intégrés. Il est recommandé de tester votre fichier en local pour vérifier qu’il fonctionne correctement avant de l’importer dans PGS.
+
+2. **Importer le fichier dans PGS Cloud**  
+   Utilisez le bouton "***Importer un document***" pour charger votre fichier HTML depuis votre espace **PGS Thèque** (la bibliothèque de documents de votre compte). Le fichier sera ensuite enregistré sur PGS Cloud, où il sera automatiquement traité et compilé.
+
+3. **Compilation du site statique**  
+   Une fois le fichier HTML importé, PGS le compile pour le rendre accessible comme une page web. Ce processus inclut l'extraction du code CSS et JavaScript intégré, qui est ensuite appliqué au fichier HTML afin qu'il soit visualisé comme une page dynamique dans le visionneur de PGS Thèque.
+
+4. **Affichage dans PGS Thèque**  
+   Le fichier importé sera disponible dans votre bibliothèque PGS et pourra être consulté à travers le visionneur intégré. Ce dernier permet de visualiser les sites comme des pages web classiques, en rendant leur contenu interactif, tant qu’il est codé dans les normes.
+
+
+## Partage des sites statiques via iFrame \{#iframe}
+
+Une fonctionnalité intéressante des sites statiques dans PGS est leur capacité à être partagés avec des sites tiers grâce à l’utilisation d’iFrames.
+
+Consultez la *[documentation d'intégration des fichier HTML](/docs/dev/iframe#html)* pour obtenir des informations détaillées sur l'utilisation de l'iFrame pour partager des sites statiques depuis PGSThèque.
+
+:::note
+En partageant votre site statique via iFrame, vous permettez à des utilisateurs externes d’afficher et d'interagir avec votre contenu. Ce partage peut se faire de manière transparente, et vos pages restent toujours hébergées et sécurisées sur PGS Cloud.
+:::
+
+
+## Limitations actuelles \{#limite}
+
+Bien que cette fonctionnalité soit puissante, il est important de noter que l’intégration des sites statiques dans PGS est *actuellement en phase de démonstration* et comporte certaines limitations :
+
+- ***Pas de mémorisation*** : À l’heure actuelle, PGS Site Intégration ne mémorise pas les enregistrements effectués sur les sites statiques. Cela signifie que toute interaction avec le site, comme les entrées de formulaire, ne sera pas conservée. Il s'agit donc d’une solution principalement pour la présentation de contenu statique sans capacité de gestion de données utilisateur.
+- ***Fonctionnalités limitées*** : Cette fonctionnalité est en cours de développement et ne prend en charge que les sites statiques. Les sites dynamiques (ceux qui interagissent avec des bases de données et offrent des contenus personnalisés) ne peuvent pas encore être intégrés de cette manière.
+- ***Environnement de démonstration*** : Actuellement, PGS Site Intégration est encore en mode démo, ce qui signifie qu'il peut y avoir des erreurs ou des limitations dans le processus d'importation, de compilation et de rendu des sites statiques. Nous vous encourageons à nous faire part de toute remarque ou problème rencontré afin d’améliorer cette fonctionnalité.
+
+
+---
 
 <Feedback />

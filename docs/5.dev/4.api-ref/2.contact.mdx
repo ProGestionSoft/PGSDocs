@@ -16,53 +16,59 @@ L'API Contact permet aux utilisateurs d’envoyer directement des messages au su
 Cette API est essentielle pour garantir un support réactif et efficace aux utilisateurs intégrant PGS dans leurs systèmes.
 
 
-## Description de l’endpoint \{#description}
+## Terminaison \{#endpoint}
 
-- **Url de base** : `https://***.com/v1/contact/send-message`
-- **Méthode** : <Post />
-- **Description** : Permet d'envoyer un message via le formulaire de contact.
-- **Paramètres de requête** :
+<details>
+  <summary>Envoyer un message</summary>
 
-| Paramètres     | Type   | Obligatoire | Description                   |
-| -------------- | ------ | ----------- | ----------------------------- |
-| `fullname`     | String | Oui         | Nom complet de l'expéditeur   |
-| `emailAddress` | String | Oui         | Adresse email de l'expéditeur |
-| `object`       | String | Oui         | Objet du message              |
-| `message`      | String | Oui         | Contenu du message            |
+    #### Description de l’endpoint \{#description}
+
+    - **Méthode** : <Post />
+    - **URL** : `/contact/send-message`
+    - **Description** : Permet d'envoyer un message via le formulaire de contact.
+    - **Paramètres de requête** :
+
+    | Paramètres     | Type   | Obligatoire | Description                   |
+    | -------------- | ------ | ----------- | ----------------------------- |
+    | `fullname`     | String | Oui         | Nom complet de l'expéditeur   |
+    | `emailAddress` | String | Oui         | Adresse email de l'expéditeur |
+    | `object`       | String | Oui         | Objet du message              |
+    | `message`      | String | Oui         | Contenu du message            |
 
 
-## Exemple de requête \{#requeste}
+    #### Exemple de requête \{#requeste}
 
-```bash
-  curl -X 'POST' \
-    'https://***.com/v1/contact/send-message?fullname=Mon%20nom%20complet&emailAddress=exemple%40gmail.com&object=Mon%20object&message=Le%20contenu%20du%20message' \
-    -H 'accept: */*' \
-    -d ''
-```
+    ```bash
+      curl -X 'POST' \
+        '{{baseUrl}}/contact/send-message?fullname=Mon%20nom%20complet&emailAddress=exemple%40gmail.com&object=Mon%20object&message=Le%20contenu%20du%20message' \
+        -H 'accept: */*' \
+        -d ''
+    ```
 
-## Réponse attendue (200 - OK) \{#answer}
+    #### Réponse attendue (200 - OK) \{#answer}
 
-```bash
-{
-  "status": true,
-  "data": {
-    "createdAt": 1739667037409,
-    "updatedAt": 1739667037409,
-    "id": 8,
-    "fullname": "Mon nom complet",
-    "emailAddress": "exemple@gmail.com",
-    "object": "Mon object",
-    "message": "Le contenu du message"
-  }
-}
-```
+    ```bash
+    {
+      "status": true,
+      "data": {
+        "createdAt": 1739667037409,
+        "updatedAt": 1739667037409,
+        "id": 8,
+        "fullname": "Mon nom complet",
+        "emailAddress": "exemple@gmail.com",
+        "object": "Mon object",
+        "message": "Le contenu du message"
+      }
+    }
+    ```
 
-## Erreurs possibles \{#error}
+    #### Erreurs possibles \{#error}
 
-| Code HTTP | Message               | Cause                            |
-| --------- | --------------------- | -------------------------------- |
-| `400`     | Bad Request           | Paramètres manquants ou invalides|
-| `500`     | Internal Server Error | Problème interne du serveur      |
+    | Code HTTP | Message               | Cause                            |
+    | --------- | --------------------- | -------------------------------- |
+    | `400`     | Not found             | Paramètres manquants ou invalides|
+    | `500`     | Internal Server Error | Problème interne du serveur      |
+</details>
 
 ---
 

@@ -8,7 +8,8 @@ import styles from '@site/src/css/docs.module.css';
 import Feedback from '@site/src/components/Feedback';
  
 
-# <i class="fas fa-briefcase"></i> Gestions des RH
+# <i class="fas fa-briefcase"></i> Gestion des Ressources Humaines (GRH)
+<img src="/img/docs/grh.png" alt="GRH" className={styles.docsImg} />
 
 <details>
   <summary>Accéder rapidement à « GRH »</summary>
@@ -19,9 +20,129 @@ import Feedback from '@site/src/components/Feedback';
 </details>
 
 
+Le module GRH (Gestion des Ressources Humaines) permet de gérer efficacement les informations liées aux employés, les postes, les fiches de paie, et bien d'autres aspects de la gestion du personnel dans votre entreprise.
+
+
+## Ajouter un nouvel employé \{#add-employee}
+Avant d’ajouter un employé, il est impératif de [définir son poste](#job) dans le système. Cela permet de structurer l’organigramme et d’associer chaque employé à une position précise.
+
+Une fois les postes créés, vous pouvez ajouter un employé :
+
+- Dans le menu des modules, ***sélectionnez Gestion des Ressources Humaines***, puis cliquez sur le bouton <span className={styles.blackBtn}><i class="fas fa-plus"></i> Ajouter un employé</span>.
+- ***Renseignez les données de l’employé*** (Nom et prénoms, Sexe, Date de naissance, Adresse e-mail, Poste (sélectionnez un poste déjà créé), Salaire, Date d’embauche, etc.)
+- Une fois toutes les informations saisies, cliquez sur <span className={styles.blueBtn}>Envoyer</span>.
+
+:::info
+- Notez que la plupart des champs est obligatoire. Toutefois, si vous pensez que l'information à renseigner est de trop, vous pouvez passer son renseignement en ajoutant de l'espace dans ce champs.
+:::
+
+
+## Gestion des fiches de paie \{#payslip}
+Le système permet de créer, visualiser, et valider les fiches de paie pour chaque employé.
+
+- Dans le module GRH, accédez à la liste des employés et ***cliquez sur l’employé concerné***.
+- Dans l'aperçu de l’employé, accédez à l’***onglet Fiche de paie***.
+- Sélectionnez le ***mois concerné***.
+- Une fois le mois sélectionné, cliquez sur <span className={styles.blueBtn}>Éditer la fiche</span> pour ***créer la fiche du mois***.
+- Remplir les Informations :
+  - ***Code*** : Référence unique pour identifier l’élément (ex. : PRIM01 pour une prime).
+  - ***Élément*** : Indique ce qui est ajouté ou retiré (ex. : prime, avance sur salaire, déduction).
+  - ***Nature*** : Spécifiez si l’élément est un Gain (Montant ajouté au salaire), un Rappel (Montant ajouté rétroactivement) ou une Déduction (Montant retiré du salaire).
+  - ***Montant*** : Valeur de l'élement.
+- A chaque fois que vous saississez une ligne, cliquez sur le bouton <span className={styles.blueBtn}>Ajouter</span> pour ***insérer cette ligne dans le tableau***.
+- Une fois toutes les informations saisies, cliquez sur <span className={styles.blueOutBtn}>Voir la liste</span> pour vérifier les données.
+- Si tout est correct, cliquez sur <span className={styles.redBtn}>Enregistrer</span>.
+
+:::warning
+- Vous pouvez éditer une fiche de paie pour un mois en cours ou antérieur non encore établi.
+Les mois ultérieurs (qui n'ont pas encore commencé) ne peuvent pas être sélectionnés.
+- Une fois validée, une fiche de paie ne peut plus être modifiée ni supprimée. Vérifiez minutieusement avant de la valider.
+:::
+
+
+## Section \{#section}
+Une section représente un service ou département au sein de l’entreprise. Chaque section regroupe plusieurs postes, qui peuvent être occupés par des employés.
+
+**Exemple** :
+- ***Service Comptabilité*** : (Responsable Administratif et Financier, Comptable, Caissier)
+- ***Service Informatique*** : (Développeur Front-End, Spécialiste No Code, Développeur Back-End)
+
+Suivez ces étapes pour ajouter une nouvelle section :
+
+- Allez dans le module GRH puis ***sélectionnez Sections*** dans le sous-menu.
+- Cliquez sur le bouton <span className={styles.blackBtn}><i class="fas fa-plus"></i> Créer une section</span> et remplissez les informations suivantes :
+  - ***Nom de la Section*** : Le nom du service ou département (ex. : Comptabilité, Informatique).
+  - ***Code de la Section*** : Un code unique pour identifier la section.
+  - ***Responsable*** : Sélectionnez un employé qui dirigera cette section.
+  - ***Postes associés*** : Ajoutez les postes qui font partie de cette section (ex. : Responsable, Comptable, Caissier).
+  - ***Employés*** : Ajoutez des employés qui font partie de cette section.
+  - ***Description*** : Une brève explication sur le rôle et les responsabilités de la section.
+- Une fois toutes les informations remplies, cliquez sur <span className={styles.redBtn}>Enregistrer</span> pour valider la section.
+  
+:::note
+- Une fois les postes associés à une section, le système ajoutera automatiquement les employés occupant ces postes dans la section.
+- Vous pouvez à tout moment éditer les détails d’une section, y compris ses postes et son responsable.
+:::
+
+
+## Poste \{#job}
+Un poste représente une fonction ou un rôle spécifique au sein de l’entreprise. Les postes permettent de définir les responsabilités de chaque employé et de les intégrer dans une structure organisationnelle claire.
+
+Pour ajouter un nouveau poste, suivez ces étapes :
+
+- Allez dans le module GRH puis sélectionnez ***Postes*** dans le sous-menu.
+- Cliquez sur <span className={styles.blackBtn}><i class="fas fa-plus"></i> Ajouter un poste</span> et renseignez les informations suivantes :
+  - ***Intitulé du Poste*** : Le nom du poste (ex. : Comptable, Développeur Front-End) et
+  - ***Description*** : Expliquez brièvement les responsabilités et les attentes du poste.
+- Cliquez sur <span className={styles.blueBtn}>Enregistrer</span> pour ajouter le poste au système.
+
+> Vous pouvez modifier ou supprimer un poste ultérieurement, tant qu'aucun employé n'y est rattaché.
+
+
+## Contrat \{#contrat}
+Un contrat formalise la relation entre l’entreprise et un employé. Il décrit les conditions de travail, les responsabilités de l’employé, et les droits et devoirs de chaque partie.
+
+Afin de créer un nouveau contrat, suivez ces étapes :
+
+- Depuis le module GRH, puis ***sélectionnez le sous-menu Contrats***.
+- Cliquez sur <span className={styles.blackBtn}><i class="fas fa-plus"></i> Ajouter un contrat</span> et complétez les champs suivants :
+  - ***Employé associé*** : Sélectionnez l’employé pour lequel le contrat est établi.
+  - ***Durée du contrat*** : Indiquez les dates de début et de fin (si applicable).
+  - ***Type de Contrat*** : CDI, CDD, Stage.
+  - ***Rémunération*** : Spécifiez le montant brut ou net convenu.
+  - ***Fichier du contrat*** : Télécharger un fichier numérique du contrat.
+- <span className={styles.blueBtn}>Enregistrer</span> pour valider le contrat.
+
+Une fois validé, le contrat sera enregistré et visible dans le dossier de l’employé concerné.
+
+Vous pouvez mettre à jour les informations d’un contrat en cas de modification des conditions de travail. Dans ce cas, l'ancien contrat est remplacé par le nouveau dans le dossier de l'employé conerné.
+
+:::warning
+Pour une tranparence des données et pour des questions d'archivage, vous ne pouvez pas supprimer un contrat déjà validé.
+:::
+
+
+## Formations \{#training}
+Les formations permettent de développer les compétences des employés et de les adapter aux besoins de l’entreprise. Elles sont une composante clé de la gestion des talents et de la montée en compétences.
+
+Suivez ces étapes pour programmer une nouvelle formation :
+
+- Dans le module GRH, ***sélectionnez le sous-menu Formation***.
+- Cliquez sur Ajouter une Formation et renseignez les informations suivantes :
+  - ***Nom de la formation*** : Ex. : Formation en gestion de projet, Sécurité informatique.
+  - ***Section*** : Les sections concernées.
+  - ***Participants*** : Indiquez les postes ou employés concernés.
+  - ***Dates et heures*** : Début et fin de la formation.
+  - ***Nature de la formation*** : En présentiel ou en ligne.
+  - ***Lieu*** : L'adresse physique ou virtuelle où se déroulera la section. 
+  - ***Description*** : Expliquez l’objectif et les contenus de la formation. 
+- Une fois toutes les informations remplies, cliquez sur <span className={styles.blueBtn}>Envoyer</span> pour enregistrer la formation.
+
+Les employés concernés recevront une notification pour confirmer leur participation.
+
 
 ## Tutoriel : Gérer les RH
-<div className={styles.ytbFrame}>
+<div className={styles.FrameMob}>
 <iframe
   src="https://www.youtube.com/embed/KAKnJ42iaKg"
   title="Connexion sur PGS"
@@ -30,5 +151,7 @@ import Feedback from '@site/src/components/Feedback';
   allowfullscreen>
 </iframe>
 </div>
+
+---
 
 <Feedback />

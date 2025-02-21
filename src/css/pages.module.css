@@ -59,11 +59,18 @@
   overflow: hidden;
 }
 
-.HeroImage {
+.HeroImg {
   flex: 0 1 35%;
   object-fit: cover;
   max-width: 35%;
   transform: skew(10deg);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.HeroImg:hover {
+  transform: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .HeroText {
@@ -211,6 +218,12 @@
   max-width: 100%;
   height: auto;
   box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.UserImg:hover {
+  transform: skew(-10deg);
+  transition: all 0.3s ease-in-out;
 }
 
 .UserCard h3 {
@@ -252,6 +265,7 @@
   height: 200px;
   min-height: 200px;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .DocsCard:hover {
@@ -470,7 +484,7 @@
     padding: 1rem;
   }
 
-  .HeroImage {
+  .HeroImg {
     display: none;
   }
 

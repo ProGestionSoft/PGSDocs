@@ -9,6 +9,8 @@ import Feedback from '@site/src/components/Feedback';
  
 
 # <i class="fas fa-project-diagram"></i> Gestion des candidatures
+<img src="/img/docs/offers.png" alt="CANDIDATURES" className={styles.docsImg} />
+
 
 <details>
   <summary>Accéder rapidement à « CANDIDATURE »</summary>
@@ -18,9 +20,73 @@ import Feedback from '@site/src/components/Feedback';
   Voici une *[liste](/docs/act/controle/search)* – none exhaustive – des mots clés de recherches pris en charge.
 </details>
 
+La gestion des candidatures permet aux entreprises de publier des offres d'emploi, de suivre les candidatures et d'évaluer les candidats de manière efficace.
+
+## Ajouter une offre d’emploi \{#add-offer}
+
+Pour publier une offre, suivez les étapes ci-dessous :
+- Dans le menu des modules, ***sélectionnez Candidature***,
+- Cliquez sur le bouton <span className={styles.blackBtn}><i class="fas fa-plus"></i> Publier une offre</span>.
+- Remplissez les informations requises : 
+  - ***Poste*** : Titre du poste à pourvoir.
+  - ***Contacts*** : Numéro de téléphone ou email pour contact.
+  - ***Lieu de travail*** : Localisation du poste.
+  - ***Profil recherché*** : Compétences et qualifications requises.
+  - ***Type de contrat*** : CDD, CDI, Stage.
+- Cliquez sur <span className={styles.blueBtn}>Envoyer</span> pour finaliser la publication de l’offre.
+
+
+## Modifier les détails d’une offre \{#edit-offer}
+- Cliquez sur l’offre concernée pour ***afficher ses détails***.
+- Cliquez sur <span className={styles.blueBtn}><i class="fas fa-pencil"></i> Modifier</span> pour mettre à jour les informations.
+
+:::info Cas d’une offre expirée
+Si l’offre a atteint sa date de clôture, elle est considérée comme expirée.
+Cliquez sur <span className={styles.greenBtn}>Ouvrir</span> pour réactiver l’offre avant de la modifier.
+:::
+
+
+## Questionnaire d'offre \{#quiz}
+### Ajouter un questionnaire à une offre \{#add-quiz}
+Pour ajouter des questionnaires à votre offre, accédez aux ***détails de l’offre*** et cliquant sur le bouton <span className={styles.blueBtn}><i class="fas fa-question"></i> Quiz</span>.
+
+Assurez-vous que votre offre soit active (en cours) avant d'effectuer cette opération.
+
+### Répartition des points \{#repartition}
+Chaque question doit avoir ***au moins une réponse correcte*** et ***une réponse incorrecte***.
+Le total des points attribués doit être exactement de 20 point pour assurer une répartition équilibrée selon le système de notation.
+
+### Systèmes de notation \{#notation}
+- ***STRICT*** : Le candidat obtient des points uniquement s’il choisit toutes et uniquement les bonnes réponses.
+- ***FLEXIBLE*** : Les points sont attribués proportionnellement aux bonnes réponses choisies. Toute mauvaise réponse entraîne une perte de points.
+
+
+## Gérer le statut des offres \{#manage-state}
+- <span className={styles.orangeBtn}>Annuler</span> : Rend l’offre invisible sur la plateformes de recrutement. Le lien reste accessible, mais les candidats ne peuvent pas postuler. Ceci est particulièrement utile pour tester et visualiser une offre avant de la rendre publique.
+- <span className={styles.whiteBtn}>Suspendre</span> : Rend l’offre indisponible avant son expiration. Le lien et l’affichage sont désactivés. Idéal si le quota de candidatures est atteint ou si l’offre n’est plus valide.
+- <span className={styles.redBtn}>Supprimer</span> : Supprime définitivement l’offre et toutes les données associées (donnée de candidats incluses). Impossible de récupérer les données après suppression.
+
+
+## Gérer les candidatures \{#manage-candidat}
+### Accéder aux candidatures d’une offre \{#acces-candidat}
+- Cliquez sur une offre.
+- Cliquez sur <span className={styles.blueBtn}><i class="far fa-user"></i> Profil candidats</span> pour voir la liste des candidats ayant postulé.
+
+### Afficher les détails d’un candidat \{#candidat-detail}
+- Cliquez sur le nom du candidat pour voir ses ***informations détaillées***.
+Si un test est associé à l’offre et que le candidat l’a passé, sa note sera affichée.
+- Dans les détails du candidat, ***définissez son statut*** : 
+  - ***Accepté*** : Candidat retenu pour l’étape suivante.
+  - ***Refusé*** : Candidat non retenu.
+
+### Voir toutes les candidatures \{#candidat-all}
+Pour afficher toutes les candidatures, sans distinction d’offres :
+- Accéder au ***module Candidature***.
+- Cliquer sur ***Profils candidats*** pour voir l’ensemble des candidats ayant postulé à toutes les offres.
+
 
 ## Tutoriel : Gérer les candidatures
-<div className={styles.ytbFrame}>
+<div className={styles.FrameMob}>
 <iframe
   src="https://www.youtube.com/embed/KAKnJ42iaKg"
   title="Connexion sur PGS"

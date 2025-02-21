@@ -1,0 +1,129 @@
+---
+id: api-blog
+sidebar_position: 1003
+title: API Blog
+description: API Référence Blog.
+---
+import styles from '@site/src/css/docs.module.css';
+import Feedback from '@site/src/components/Feedback';
+import { Get, Post, Put, Delete } from '@site/src/components/HttpMethods';
+ 
+
+# <i class="fa-solid fa-newspaper"></i> API articles de blog
+
+L'API Newsletter permet aux utilisateurs de s'abonner automatiquement aux newsletters de PRO GESTION SOFT directement depuis une plateforme tierce. Grâce à cette API, les entreprises et développeurs peuvent offrir à leurs utilisateurs un moyen simple de rester informés des actualités, mises à jour et nouvelles fonctionnalités de PGS.
+
+Cette API est idéale pour les plateformes souhaitant informer leurs utilisateurs des évolutions de PGS sans effort supplémentaire.
+
+## Base URL \{#url}
+```bash
+https://***.com/v1/public/blog
+```
+
+## Terminaisons \{#endpoint}
+
+<details>
+  <summary>Récupérer tous les articles de blog</summary>
+
+    #### Description de l’endpoint \{#description}
+
+    - **Méthode** : <Get />
+    - **URL** : `/post/all`
+    - **Description** : Retourne la liste complète des articles publiés.
+
+
+    #### Exemple de requête \{#requeste}
+
+    ```bash
+      curl -X 'POST' \
+        'https://***.com/v1/public/blog/post/all' \
+        -H 'accept: */*' \
+    ```
+
+    #### Réponse attendue (200 - OK) \{#answer}
+
+    ```bash
+      {
+        "status": true,
+        "data": {
+          "createdAt": 1736732331699,
+          "updatedAt": 1736732799089,
+          "id": 1,
+          "author": "L'auteur",
+          "title": "Titre de l'article",
+          "object": "L'objet",
+          "content": "<p>Contenu de l'article avec HTML</p>",
+          "reads": 0,
+          "status": "visible",
+          "image": {
+            "url": "https://***.com/api/v1/***",
+            "type": "png"
+          }
+        }
+    }
+    ```
+
+    #### Erreurs possibles \{#error}
+
+    | Code HTTP | Message               | Cause                            |
+    | --------- | --------------------- | -------------------------------- |
+    | `400`     | Bad Request           | Paramètres manquants ou invalides|
+    | `500`     | Internal Server Error | Problème interne du serveur      |
+</details>
+
+<details>
+  <summary>Récupérer un article de blog par ID</summary>
+
+    #### Description de l’endpoint \{#description}
+
+    - **Méthode** : <Get />
+    - **URL** : `/post/{id}`
+    - **Description** : Retourne un article spécifique identifié par son id.
+
+
+    #### Exemple de requête \{#requeste}
+
+    ```bash
+      curl -X 'POST' \
+        'https://***.com/v1/public/blog/post/1' \
+        -H 'accept: */*' \
+    ```
+
+    #### Réponse attendue (200 - OK) \{#answer}
+
+    ```bash
+    {
+      "nb": 1,
+      "data": {
+        {
+          "id": 1,
+          "createdAt": 1736732331699,
+          "updatedAt": 1736732799089,
+          "author": "L'auteur",
+          "title": "Titre de l'article",
+          "object": "L'objet",
+          "content": "<p>Contenu de l'article avec HTML</p>",
+          "reads": 0,
+          "status": "visible",
+          "image": {
+          "url": "https://***.com/api/v1/***",
+          "type": "png"
+            }
+          }
+        }
+      }
+    ```
+
+    #### Erreurs possibles \{#error}
+
+    | Code HTTP | Message               | Cause                            |
+    | --------- | --------------------- | -------------------------------- |
+    | `400`     | Bad Request           | Paramètres manquants ou invalides|
+    | `500`     | Internal Server Error | Problème interne du serveur      |
+</details>
+
+
+
+---
+
+<Feedback />
